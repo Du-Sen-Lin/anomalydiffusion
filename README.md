@@ -21,12 +21,13 @@
 You can download the new version in the following link to Google Drive.
 - ```ldm/models/diffusion/ddpm.py``` has been updated since previous validation step has some problem. But it does not influence the training results.
 
-## Todo (Latest update: 2024/03/13)
+## Todo (Latest update: 2024/08/11)
 - [x] **Release the training code
 - [x] **Release the UNet checkpoints for testing anomaly detection accuracy
 - [x] **Release the data
 - [x] **Release checkpoints for anomalydiffusion.
 - [x] **Release the inference code
+- [x] **Release the code for ic-lpipis
 
 
 
@@ -146,6 +147,13 @@ you can train and test the **anomaly classification model** by:
 python train-classification.py --mvtec_path=$path_to_mvtec --generated_data_path=$path_to_the_generated_data
 python test-classification.py --mvtec_path=$path_to_mvtec --generated_data_path=$path_to_the_generated_data
 ```
+
+## Compute IC-LPIPS
+To compute IC-LPIPS for the generated dataset, please run:
+```
+python cal_ic_lpips.py --mvtec_path=$path_to_mvtec --gen_path=$path_to_the_generated_data
+```
+
 ## Citation
 
 If you make use of our work, please cite our paper:
